@@ -1,0 +1,231 @@
+/* =======================
+   CSS COLOR VARIABLES
+========================== */
+:root {
+    --bg-color: #121212;
+    --navbar-bg: #2e2e37;
+    --text-light: #ffffff;
+    --text-muted: #dddddd;
+    --accent-color: #fbb625;
+    --accent-color-hover: #a37511;
+    --border-color: #333333;
+    --dropdown-hover: #333333;
+    --background: #121212;
+    --text-color: #ffffff;
+    --text-muted: #cccccc;
+    --text-hover: #fbb625;
+}
+
+/* =======================
+   GLOBAL STYLES
+========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+}
+
+.d-flex {
+  height: 100vh; /* Take up the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =======================
+   NAVBAR STYLES
+========================== */
+.navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .nav-link {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--accent-color);
+}
+
+.custom-navbar {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}  
+
+.custom-nav {
+    margin-left: auto;
+    gap: 3rem; /* or any value you prefer */
+    display: flex; /* Bootstrap may already do this, just to be safe */
+    margin-right: 3rem;
+}
+
+.logo-img {
+  margin-left: 25px;
+}
+
+/* =======================
+   DROPDOWN MENU STYLES
+========================== */
+.dropdown-menu {
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dropdown-item:hover {
+  background-color: var(--dropdown-hover);
+  color: var(--accent-color);
+}
+
+/* === Hero Section === */
+.hero-section {
+  height: calc(100vh - 67px - 103px); /* navbar + footer height approx */
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+
+.hero-section-container {
+  height: calc(100vh - 67px - 103px);
+  position: relative; /* Makes sure the image and content are positioned correctly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent any scrollbar from showing */
+}
+
+section .container {
+  background-color: var(--navbar-bg);
+  width: 750px;
+  height: 275px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow in the container */
+  z-index: 2; /* Keep the box above the image */
+}
+
+section .container h4,
+section .container p,
+section .container button {
+  margin-bottom: 15px;
+  max-width: 100%; /* Prevent text overflow */
+}
+
+section .container button {
+  margin-top: auto;
+}
+
+  .hero-section h1 {
+    color: var(--text-color);
+  }
+  
+  .hero-section p {
+    color: var(--text-muted);
+  }
+  
+  .hero-section .btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  
+  .hero-section .btn-primary:hover {
+    background-color: var(--accent-color-hover);
+  }
+
+
+  /*----------Tivia CSS--------------*/
+
+  .trivia-panel {
+    position: fixed;
+    bottom: 115px;
+    right: 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: var(--bs-body-font-family);
+    box-shadow: 0 0 10px rgba(251, 183, 37, 0.103);
+    width: 500px;
+    max-height: 250px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .trivia-heading {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: bold;
+
+  }
+  
+  .trivia-panel.show {
+    opacity: 1;
+    font-size: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  /* Keyframes for fade-out effect */
+  @keyframes fadeOut {
+      0% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+
+  /* ------- Footer CSS -------- */
+  .site-footer {
+    background-color: var(--navbar-bg);
+    color: var(--text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+  }
+
+  .site-footer a {
+      color: var(--highlight);
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .site-footer a:hover {
+      color: var(--text-hover);
+  }
+
+  .footer-links {
+      margin-top: 0.5rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .custom-nav {
+      gap: 0.5rem; /* smaller vertical space in mobile view */
+    }
+  }
+  

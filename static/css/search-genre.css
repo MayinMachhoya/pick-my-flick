@@ -1,0 +1,176 @@
+:root {
+    --bg-color: #121212;
+    --navbar-bg: #2e2e37;
+    --text-light: #ffffff;
+    --text-muted: #dddddd;
+    --accent-color: #fbb625;
+    --accent-color-hover: #a37511;
+    --border-color: #333333;
+    --dropdown-hover: #333333;
+    --background: #121212;
+    --text-color: #ffffff;
+    --text-muted: #cccccc;
+    --text-hover: #fbb625;
+}
+/* =======================
+   GLOBAL STYLES
+========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+}
+
+
+/* =======================
+   NAVBAR STYLES
+========================== */
+.navbar {
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .navbar .nav-link {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: var(--accent-color);
+  }
+  
+  .custom-navbar {
+      background-color: var(--navbar-bg) !important;
+      border-bottom: 1px solid var(--border-color);
+  }  
+  
+  .custom-nav {
+      margin-left: auto;
+      gap: 3rem; /* or any value you prefer */
+      display: flex; /* Bootstrap may already do this, just to be safe */
+      margin-right: 3rem;
+  }
+
+  .navbar .dropdown-toggle::after {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: static !important; /* Reset custom positioning */
+    transform: none !important;  /* Prevent misalignment */
+}
+
+.logo-img {
+  margin-left: 25px;
+}
+
+
+.search-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .search-box input {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-box input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  .search-box input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+  }
+  
+  #searchGenreBtn {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  
+  #searchGenreBtn:hover {
+    background-color: var(--accent-color-hover);
+  }
+  
+.genre-dropdown-menu {
+  display: none; /* hide by default */
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  max-height: 500px;
+  overflow-y: auto;
+  white-space: normal;
+  width: 100%;
+  z-index: 1050;
+  position: absolute;
+  transform: translate3d(0px, 40px, 0px);
+  padding: 10px;
+}
+
+.genre-dropdown-menu.show {
+    display: grid; /* show it when Bootstrap applies .show */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+}
+
+  
+  .dropdown-toggle::after {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+  
+  .dropdown-menu .form-check {
+    padding: 8px 12px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+  .form-check-input {
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-muted);
+    margin-right: 8px;
+  }
+  
+  .form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .form-check-label {
+    color: var(--text-light);
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 25px);
+  }
+
+  /* Make dropdown wider */
+#genreCheckboxDropdown {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 50px;
+    width: 100%;
+    min-width: 600px;
+    white-space: normal;
+}
+
+.search-box .dropdown-toggle {
+  background-color: var(--bg-color);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+
+@media (max-width: 768px) {
+  #genreCheckboxDropdown {
+      grid-template-columns: repeat(1, 1fr);
+      min-width: auto;
+  }
+}

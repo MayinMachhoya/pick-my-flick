@@ -1,0 +1,135 @@
+:root {
+    --bg-color: #121212;
+    --navbar-bg: #2e2e37;
+    --text-light: #ffffff;
+    --text-muted: #dddddd;
+    --accent-color: #fbb625;
+    --accent-color-hover: #a37511;
+    --border-color: #333333;
+    --dropdown-hover: #333333;
+    --background: #121212;
+    --text-color: #ffffff;
+    --text-muted: #cccccc;
+    --text-hover: #fbb625;
+}
+/* =======================
+   GLOBAL STYLES
+========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+}
+
+
+/* =======================
+   NAVBAR STYLES
+========================== */
+.navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .nav-link {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--accent-color);
+}
+
+.custom-navbar {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}  
+
+.custom-nav {
+    margin-left: auto;
+    gap: 3rem; /* or any value you prefer */
+    display: flex; /* Bootstrap may already do this, just to be safe */
+    margin-right: 3rem;
+}
+
+.logo-img {
+  margin-left: 25px;
+}
+
+
+.search-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .search-box input {
+    background-color: var(--bg-color);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-box input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  .search-box input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+  }
+  
+  #searchTitleBtn {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  
+  #searchTitleBtn:hover {
+    background-color: var(--accent-color-hover);
+  }
+
+/* =======================
+   RECOMMENDATION CSS
+========================== */
+
+
+  .recommendations-container {
+    margin-top: 20px;
+  }
+  
+  .recommendations-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .movie-card {
+    flex: 0 0 auto;
+    width: 150px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card h3 {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  .movie-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    padding: 0 10px 10px;
+  }
+  
+  

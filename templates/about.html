@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pick-My-Flick</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="\static\css\about.css" />
+    <link rel="shortcut icon" href="\static\img\favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand logo-img" href="{{ url_for('index') }}">
+                <img src="\static\img\logo.png" alt="PickAFlick" height="40" />
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav custom-nav">
+                  <li class="nav-item">
+                  <a class="nav-link" role="button" href="{{ url_for('index') }}">Home</a>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Search By
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="{{ url_for('search_title') }}">Title</a></li>
+                      <li><a class="dropdown-item" href="{{ url_for('search_genre') }}">Genre</a></li>
+                      <li><a class="dropdown-item" href="{{ url_for('search_actor') }}">Actor</a></li>
+                      <li><a class="dropdown-item" href="{{ url_for('search_director') }}">Director</a></li>
+                  </ul>
+                  </li>
+  
+                  <li class="nav-item">
+                  <a class="nav-link" role="button" href="{{ url_for('about') }}">About</a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Intro -->
+    <section class="about-hero d-flex flex-wrap align-items-center justify-content-between px-5 py-5">
+        <div class="hero-graphic col-md-6 mb-4 mb-md-0 text-center">
+          <img src="\static\img\about.png" alt="Vector Illustration" class="img-fluid vector-style" />
+        </div>
+        <div class="hero-text col-md-6">
+            <h2 class="fw-bold mb-3">About <span style="color: var(--highlight);">This Project</span></h2>
+            <p class="mb-2">
+              <strong>Pick</strong> <strong style="color: var(--highlight);">My Flick</strong> isn't just a movie recommendation platform - it's a thoughtfully built system designed to understand your cinematic cravings through context and connection. Powered by the timeless elegance of cosine similarity, our model analyzes movie features to draw subtle lines between what you've searched for and what you're destined to love next.
+            </p>
+            <br>
+            <p class="mb-2">
+              There's no overwhelming AI complexity under the hood - just clean, efficient logic doing what it does best: finding you the right film at the right time.
+            </p>
+            <br>
+            <p class="mb-2">    
+              Built with a developer's eye for minimalism and a cinephile's heart for story, this site brings you a seamless blend of discovery and delight. Whether you're exploring genres, actors, directors, or diving into something entirely new, it's all just a click away.
+            </p>
+          </div>          
+      </section>
+      
+
+
+    <section class="profile-section d-flex justify-content-center py-5 px-3">
+        
+        <div class="model-training-card">
+          <h3>Behind <span style="color: var(--highlight);">the Curtains :</span> The Dataset & <span style="color: var(--highlight);">The Model</span></h3>
+          <p>
+            In the vast streaming jungle, choosing the right dataset is like picking the right script - everything depends on it.
+          </p>
+          <p>
+            We found ours in <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data" target="_blank">The Movie Dataset</a> - discovered deep in the vaults of <a href="https://www.kaggle.com/" target="_blank">Kaggle</a>. It wasn't just downloaded; it was curated. Cleaned. Purged of null values and unnecessary noise. The heart of our system - the tags column - was synthesized here, forming the DNA of every recommendation.
+          </p>
+          <p>
+            Once the data was polished to perfection, the real training began. <br>
+            The core of our engine? Cosine Similarity, used to compare tag-based vector representations of each film. A movie's recommendation wasn't based on genre or fame - but pure tag-based context. A neural vibe check, if you will.
+          </p>
+          <p>
+            From there, we expanded the horizon: <br>
+            <i class="fa-solid fa-caret-right"></i> Recommendations by genre (yes, multiple genres - we see you, sci-fi romantic thrillers) <br>
+            <i class="fa-solid fa-caret-right"></i> Discovery by actor and director - perfect for fans chasing filmographies <br>
+            But then came the evolution - a deeper layer beneath the popcorn.
+          </p>
+          <p>
+            We trained Word2Vec on our tag corpus to capture subtle relationships between words - because "space" and "alien" often hold hands.
+            Next, we brought in KMeans Clustering, organizing movies into thematic tribes. 
+            And finally, within each cluster, cosine similarity helped us surface the 10 closest cinematic siblings. <br>
+            And just like that - what began as a humble dataset evolved into a model that not only recommends…
+            It understands.
+          </p>
+        </div>
+
+
+        <div class="profile-card text-center p-4">
+          <img src="\static\img\profile-pic.jpeg" alt="Mayin Machhoya" class="profile-pic mb-3">
+          <h2 class="mb-1"><span style="color: var(--highlight);">Mayin</span> Machhoya</h2>
+          <h6 class="--text-muted mb-3">Computer Engineering Student • Full Stack Developer</h6>
+          
+            <a href="https://drive.google.com/file/d/12FEIuAwL0e7iDLLbNyqhnU0zoNQis9qj/view?usp=drive_link" class="resume-btn btn btn-outline-light mt-2 mb-3" target="_blank">
+                <i class="bi bi-file-earmark-person-fill me-2"></i>View Resume
+            </a>          
+      
+          <div class="social-links mt-3">
+            <a href="mailto:mnmachhoya@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://github.com/MayinMachhoya"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mayin-machhoya-360480313/"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/9054581505"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        
+    </section>                 
+    
+    <footer class="site-footer text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-2">© 2025 Pick My Flick. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="mailto:mnmachhoya@gmail.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+    
+      <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1bb65256f.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

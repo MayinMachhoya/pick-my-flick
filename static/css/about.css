@@ -1,0 +1,277 @@
+:root {
+    --dark-bg: #121212;
+    --card-bg: #1f1f1f;
+    --text-light: #e2e2e2;
+    --gray-text: #aaaaaa;
+    --navbar-bg: #2e2e37;
+    --border-color: #333333;
+    --text-muted: #dddddd;
+    --accent-color: #fbb625;
+    --text-hover: #fbb625;
+    --highlight: #fbb625;
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+/* =======================
+NAVBAR STYLES
+========================== */
+.navbar {
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .navbar .nav-link {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    /* text-decoration: none;
+    position: relative; */
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: var(--accent-color);
+    /* text-decoration: none; */
+  }
+  
+  /* .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--bg-color);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  } */
+
+
+  .custom-navbar {
+      background-color: var(--navbar-bg) !important;
+      border-bottom: 1px solid var(--border-color);
+  }  
+  
+  .custom-nav {
+      margin-left: auto;
+      gap: 3rem; /* or any value you prefer */
+      display: flex; /* Bootstrap may already do this, just to be safe */
+      margin-right: 3rem;
+  }
+  
+  .logo-img {
+    margin-left: 25px;
+  }
+
+  /* Section 1 */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background-color: var(--bg-color);
+}
+
+.about-section img {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.about-text {
+    max-width: 550px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto;
+  }  
+
+.about-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    text-align: inherit;
+  }
+
+  .vector-style {
+    max-width: 100%;
+    width: 550px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+.vector-style:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px #fbb7255b;
+    }
+
+.about-heading span {
+    color: var(--text-color);
+    font-weight: normal;
+  }
+
+  .about-hero {
+    background-color: var(--dark-bg);
+    padding: 4rem 2rem;
+  }
+  
+  .highlighted {
+    color: var(--primary-yellow);
+  }
+  
+  .hero-text p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: var(--text-light);
+  }
+  
+  /*Model Training Card CSS*/
+  .model-training-card {
+    background: var(--card-bg);
+    padding: 24px;
+    margin-left: 16px;
+    margin-right: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 745px;
+  }
+  
+  .model-training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(255, 255, 255, 0.1);
+  }
+  
+  .model-training-card h3 {
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .model-training-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+  
+  .model-training-card li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+  }
+
+  .model-training-card a {
+    color: var(--accent-color);
+  }
+
+  /* Section 2 */
+  .profile-section {
+    background-color: var(--bg-color);
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 1rem; /* square with soft corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+    max-width: 400px;
+    width: 100%;
+    max-height: 745px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(255, 255, 255, 0.1);
+  }
+  
+  .resume-btn {
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+  }
+  
+  .resume-btn:hover {
+    background-color: var(--highlight);
+    border: none;
+    /* color: var(--bg-color); */
+    transform: scale(1.03);
+  }
+  
+  .profile-card h2 {
+    font-size: 2rem;
+  }
+  
+  .profile-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .social-links a {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: var(--highlight);
+  }
+
+  
+  /* ------- Footer CSS -------- */
+  .site-footer {
+    background-color: var(--navbar-bg);
+    color: var(--text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+  }
+
+  .site-footer a {
+      color: var(--highlight);
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .site-footer a:hover {
+      color: var(--text-hover);
+  }
+
+  .footer-links {
+      margin-top: 0.5rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .custom-nav {
+      gap: 0.5rem; /* smaller vertical space in mobile view */
+    }
+  }
+  

@@ -1,0 +1,9 @@
+Flask
+pandas
+numpy
+scikit-learn
+gensim
+fuzzywuzzy
+scipy
+python-Levenshtein
+gunicorn==23.0.0
