@@ -91,7 +91,7 @@ To run the project locally, follow these steps:
 
 ## 👤 Author Credits 
 
-**Mayin Machhoya** - Computer Engineer 
+**Mayin Machhoya** - Computer Engineer   
 [Resume](https://drive.google.com/file/d/12FEIuAwL0e7iDLLbNyqhnU0zoNQis9qj/view)  
 [GitHub](https://github.com/MayinMachhoya)  
 [LinkedIn](https://www.linkedin.com/in/mayin-machhoya-360480313/)  
